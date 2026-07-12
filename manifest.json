@@ -1,0 +1,29 @@
+{
+  "id": "pricing-optimizer",
+  "title": "Pricing Optimizer App",
+  "industry": "Retail, Commerce & Consumer",
+  "industryId": "retail-commerce-consumer",
+  "specialization": "Pricing Optimizer",
+  "sourcePlatformGroup": "retail-ecommerce-platform",
+  "sources": [
+    "AIFashionDesigner",
+    "AIPricingOptimizer",
+    "AIWholesaleDistributionOptimizer"
+  ],
+  "featureCount": 132,
+  "candidateFeatureCount": 199,
+  "eliminatedSimilarFeatures": 67,
+  "evidenceCount": 431,
+  "aiPageCount": 0,
+  "sourceAIPageCount": 0,
+  "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
+  "optimizationPolicy": "Equivalent feature names are consolidated once per industry and assigned to one canonical app owner",
+  "database": "database.sqlite",
+  "databaseSeed": {
+    "seededProjects": 2,
+    "seededTables": 44,
+    "seededRows": 691
+  },
+  "visibleFeatureCount": 54,
+  "featureVisibilityMode": "seeded-or-ai"
+}
