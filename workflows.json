@@ -1,53 +1,1850 @@
 {
-  "version":1,"appId":"pricing-optimizer",
-  "workflows":[
+  "version": 1,
+  "appId": "pricing-optimizer",
+  "workflows": [
     {
-      "id":"market-data-intake","title":"Product and Market Data Intake","description":"Load product costs, current prices, inventory, and competitor observations from local, manual, or configured sources.",
-      "fields":[{"key":"datasetRef","label":"Dataset Reference","type":"text","required":true},{"key":"category","label":"Product Category","type":"text","required":true},{"key":"source","label":"Data Source","type":"select","required":true,"options":["Local CSV","Manual entry","Configured commerce feed"]},{"key":"asOfDate","label":"As-of Date","type":"date","required":true},{"key":"recordCount","label":"Record Count","type":"number","required":true}],
-      "states":["draft","validating","needs-correction","accepted","active"],"transitions":[{"id":"validate","label":"Validate Dataset","from":["draft","needs-correction"],"to":"validating"},{"id":"correct","label":"Request Correction","from":["validating"],"to":"needs-correction"},{"id":"accept","label":"Accept Dataset","from":["validating"],"to":"accepted"},{"id":"activate","label":"Activate Dataset","from":["accepted"],"to":"active"}],
-      "seeds":[{"id":"market-data-1001","state":"draft","datasetRef":"PRICE-DATA-0713","category":"Home office accessories","source":"Local CSV","asOfDate":"2026-07-13","recordCount":240}]
+      "id": "market-data-intake",
+      "title": "Product and Market Data Intake",
+      "description": "Load product costs, current prices, inventory, and competitor observations from local, manual, or configured sources.",
+      "fields": [
+        {
+          "key": "datasetRef",
+          "label": "Dataset Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "category",
+          "label": "Product Category",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "source",
+          "label": "Data Source",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Local CSV",
+            "Manual entry",
+            "Configured commerce feed"
+          ]
+        },
+        {
+          "key": "asOfDate",
+          "label": "As-of Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "recordCount",
+          "label": "Record Count",
+          "type": "number",
+          "required": true
+        }
+      ],
+      "states": [
+        "draft",
+        "validating",
+        "needs-correction",
+        "accepted",
+        "active"
+      ],
+      "transitions": [
+        {
+          "id": "validate",
+          "label": "Validate Dataset",
+          "from": [
+            "draft",
+            "needs-correction"
+          ],
+          "to": "validating"
+        },
+        {
+          "id": "correct",
+          "label": "Request Correction",
+          "from": [
+            "validating"
+          ],
+          "to": "needs-correction"
+        },
+        {
+          "id": "accept",
+          "label": "Accept Dataset",
+          "from": [
+            "validating"
+          ],
+          "to": "accepted"
+        },
+        {
+          "id": "activate",
+          "label": "Activate Dataset",
+          "from": [
+            "accepted"
+          ],
+          "to": "active"
+        }
+      ],
+      "seeds": [
+        {
+          "id": "market-data-intake-001",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — North Region — North Region",
+          "category": "Home office accessories — North Region — North Region",
+          "source": "Local CSV",
+          "asOfDate": "2026-07-13",
+          "recordCount": 240.0
+        },
+        {
+          "id": "market-data-intake-002",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Enterprise Account — Enterprise Account",
+          "category": "Home office accessories — Enterprise Account — Enterprise Account",
+          "source": "Manual entry",
+          "asOfDate": "2026-07-15",
+          "recordCount": 242.0
+        },
+        {
+          "id": "market-data-intake-003",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Quarterly Cycle — Quarterly Cycle",
+          "category": "Home office accessories — Quarterly Cycle — Quarterly Cycle",
+          "source": "Configured commerce feed",
+          "asOfDate": "2026-07-17",
+          "recordCount": 244.0
+        },
+        {
+          "id": "market-data-intake-004",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Priority Queue — Priority Queue",
+          "category": "Home office accessories — Priority Queue — Priority Queue",
+          "source": "Local CSV",
+          "asOfDate": "2026-07-19",
+          "recordCount": 246.0
+        },
+        {
+          "id": "market-data-intake-005",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Operations Review — Operations Review",
+          "category": "Home office accessories — Operations Review — Operations Review",
+          "source": "Manual entry",
+          "asOfDate": "2026-07-21",
+          "recordCount": 248.0
+        },
+        {
+          "id": "market-data-intake-006",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Customer Request — Customer Request",
+          "category": "Home office accessories — Customer Request — Customer Request",
+          "source": "Configured commerce feed",
+          "asOfDate": "2026-07-23",
+          "recordCount": 250.0
+        },
+        {
+          "id": "market-data-intake-007",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Compliance Check — Compliance Check",
+          "category": "Home office accessories — Compliance Check — Compliance Check",
+          "source": "Local CSV",
+          "asOfDate": "2026-07-25",
+          "recordCount": 252.0
+        },
+        {
+          "id": "market-data-intake-008",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Service Window — Service Window",
+          "category": "Home office accessories — Service Window — Service Window",
+          "source": "Manual entry",
+          "asOfDate": "2026-07-27",
+          "recordCount": 254.0
+        },
+        {
+          "id": "market-data-intake-009",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Quality Sample — Quality Sample",
+          "category": "Home office accessories — Quality Sample — Quality Sample",
+          "source": "Configured commerce feed",
+          "asOfDate": "2026-07-29",
+          "recordCount": 256.0
+        },
+        {
+          "id": "market-data-intake-010",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Management Review — Management Review",
+          "category": "Home office accessories — Management Review — Management Review",
+          "source": "Local CSV",
+          "asOfDate": "2026-07-31",
+          "recordCount": 258.0
+        },
+        {
+          "id": "market-data-intake-011",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Exception Follow-up — Exception Follow-up",
+          "category": "Home office accessories — Exception Follow-up — Exception Follow-up",
+          "source": "Manual entry",
+          "asOfDate": "2026-08-02",
+          "recordCount": 260.0
+        },
+        {
+          "id": "market-data-intake-012",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Evidence Package — Evidence Package",
+          "category": "Home office accessories — Evidence Package — Evidence Package",
+          "source": "Configured commerce feed",
+          "asOfDate": "2026-08-04",
+          "recordCount": 262.0
+        },
+        {
+          "id": "market-data-intake-013",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Planning Cycle — Planning Cycle",
+          "category": "Home office accessories — Planning Cycle — Planning Cycle",
+          "source": "Local CSV",
+          "asOfDate": "2026-08-06",
+          "recordCount": 264.0
+        },
+        {
+          "id": "market-data-intake-014",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Performance Review — Performance Review",
+          "category": "Home office accessories — Performance Review — Performance Review",
+          "source": "Manual entry",
+          "asOfDate": "2026-08-08",
+          "recordCount": 266.0
+        },
+        {
+          "id": "market-data-intake-015",
+          "state": "draft",
+          "datasetRef": "PRICE-DATA-0713 — Final Verification — Final Verification",
+          "category": "Home office accessories — Final Verification — Final Verification",
+          "source": "Configured commerce feed",
+          "asOfDate": "2026-08-10",
+          "recordCount": 268.0
+        }
+      ]
     },
     {
-      "id":"demand-forecast","title":"Demand Forecast","description":"Forecast unit demand by product and horizon using a transparent local baseline or a declared configured provider.",
-      "fields":[{"key":"productScope","label":"Product Scope","type":"text","required":true},{"key":"horizonDays","label":"Forecast Horizon Days","type":"number","required":true},{"key":"forecastMode","label":"Forecast Mode","type":"select","required":true,"options":["Local moving average","Manual forecast","Configured AI provider"]},{"key":"seasonality","label":"Seasonality","type":"select","required":true,"options":["None","Weekly","Monthly","Holiday"]},{"key":"analyst","label":"Forecast Analyst","type":"text","required":true}],
-      "states":["configured","running","review","approved","rework"],"transitions":[{"id":"run","label":"Run Forecast","from":["configured","rework"],"to":"running"},{"id":"review","label":"Review Forecast","from":["running"],"to":"review"},{"id":"approve","label":"Approve Forecast","from":["review"],"to":"approved"},{"id":"rework","label":"Request Rework","from":["review"],"to":"rework"}],
-      "seeds":[{"id":"forecast-1001","state":"configured","productScope":"Category: desk organizers","horizonDays":30,"forecastMode":"Local moving average","seasonality":"Weekly","analyst":"Cameron Hill"}]
+      "id": "demand-forecast",
+      "title": "Demand Forecast",
+      "description": "Forecast unit demand by product and horizon using a transparent local baseline or a declared configured provider.",
+      "fields": [
+        {
+          "key": "productScope",
+          "label": "Product Scope",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "horizonDays",
+          "label": "Forecast Horizon Days",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "forecastMode",
+          "label": "Forecast Mode",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Local moving average",
+            "Manual forecast",
+            "Configured AI provider"
+          ]
+        },
+        {
+          "key": "seasonality",
+          "label": "Seasonality",
+          "type": "select",
+          "required": true,
+          "options": [
+            "None",
+            "Weekly",
+            "Monthly",
+            "Holiday"
+          ]
+        },
+        {
+          "key": "analyst",
+          "label": "Forecast Analyst",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "states": [
+        "configured",
+        "running",
+        "review",
+        "approved",
+        "rework"
+      ],
+      "transitions": [
+        {
+          "id": "run",
+          "label": "Run Forecast",
+          "from": [
+            "configured",
+            "rework"
+          ],
+          "to": "running"
+        },
+        {
+          "id": "review",
+          "label": "Review Forecast",
+          "from": [
+            "running"
+          ],
+          "to": "review"
+        },
+        {
+          "id": "approve",
+          "label": "Approve Forecast",
+          "from": [
+            "review"
+          ],
+          "to": "approved"
+        },
+        {
+          "id": "rework",
+          "label": "Request Rework",
+          "from": [
+            "review"
+          ],
+          "to": "rework"
+        }
+      ],
+      "seeds": [
+        {
+          "id": "demand-forecast-001",
+          "state": "configured",
+          "productScope": "Category: desk organizers — North Region — North Region",
+          "horizonDays": 30.0,
+          "forecastMode": "Local moving average",
+          "seasonality": "None",
+          "analyst": "Avery Morgan"
+        },
+        {
+          "id": "demand-forecast-002",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Enterprise Account — Enterprise Account",
+          "horizonDays": 32.0,
+          "forecastMode": "Manual forecast",
+          "seasonality": "Weekly",
+          "analyst": "Jordan Lee"
+        },
+        {
+          "id": "demand-forecast-003",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Quarterly Cycle — Quarterly Cycle",
+          "horizonDays": 34.0,
+          "forecastMode": "Configured AI provider",
+          "seasonality": "Monthly",
+          "analyst": "Taylor Brooks"
+        },
+        {
+          "id": "demand-forecast-004",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Priority Queue — Priority Queue",
+          "horizonDays": 36.0,
+          "forecastMode": "Local moving average",
+          "seasonality": "Holiday",
+          "analyst": "Morgan Chen"
+        },
+        {
+          "id": "demand-forecast-005",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Operations Review — Operations Review",
+          "horizonDays": 38.0,
+          "forecastMode": "Manual forecast",
+          "seasonality": "None",
+          "analyst": "Riley Patel"
+        },
+        {
+          "id": "demand-forecast-006",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Customer Request — Customer Request",
+          "horizonDays": 40.0,
+          "forecastMode": "Configured AI provider",
+          "seasonality": "Weekly",
+          "analyst": "Casey Nguyen"
+        },
+        {
+          "id": "demand-forecast-007",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Compliance Check — Compliance Check",
+          "horizonDays": 42.0,
+          "forecastMode": "Local moving average",
+          "seasonality": "Monthly",
+          "analyst": "Cameron Diaz"
+        },
+        {
+          "id": "demand-forecast-008",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Service Window — Service Window",
+          "horizonDays": 44.0,
+          "forecastMode": "Manual forecast",
+          "seasonality": "Holiday",
+          "analyst": "Drew Wilson"
+        },
+        {
+          "id": "demand-forecast-009",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Quality Sample — Quality Sample",
+          "horizonDays": 46.0,
+          "forecastMode": "Configured AI provider",
+          "seasonality": "None",
+          "analyst": "Emerson Clark"
+        },
+        {
+          "id": "demand-forecast-010",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Management Review — Management Review",
+          "horizonDays": 48.0,
+          "forecastMode": "Local moving average",
+          "seasonality": "Weekly",
+          "analyst": "Hayden Kim"
+        },
+        {
+          "id": "demand-forecast-011",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Exception Follow-up — Exception Follow-up",
+          "horizonDays": 50.0,
+          "forecastMode": "Manual forecast",
+          "seasonality": "Monthly",
+          "analyst": "Jamie Rivera"
+        },
+        {
+          "id": "demand-forecast-012",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Evidence Package — Evidence Package",
+          "horizonDays": 52.0,
+          "forecastMode": "Configured AI provider",
+          "seasonality": "Holiday",
+          "analyst": "Kai Thompson"
+        },
+        {
+          "id": "demand-forecast-013",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Planning Cycle — Planning Cycle",
+          "horizonDays": 54.0,
+          "forecastMode": "Local moving average",
+          "seasonality": "None",
+          "analyst": "Logan Shah"
+        },
+        {
+          "id": "demand-forecast-014",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Performance Review — Performance Review",
+          "horizonDays": 56.0,
+          "forecastMode": "Manual forecast",
+          "seasonality": "Weekly",
+          "analyst": "Parker Evans"
+        },
+        {
+          "id": "demand-forecast-015",
+          "state": "configured",
+          "productScope": "Category: desk organizers — Final Verification — Final Verification",
+          "horizonDays": 58.0,
+          "forecastMode": "Configured AI provider",
+          "seasonality": "Monthly",
+          "analyst": "Quinn Murphy"
+        }
+      ]
     },
     {
-      "id":"elasticity-model","title":"Price Elasticity Analysis","description":"Estimate demand response to price changes, document data sufficiency, and require analyst validation.",
-      "fields":[{"key":"productRef","label":"Product Reference","type":"text","required":true},{"key":"historyWeeks","label":"History Weeks","type":"number","required":true},{"key":"modelMode","label":"Model Mode","type":"select","required":true,"options":["Local regression","Manual estimate","Configured AI provider"]},{"key":"confidenceThreshold","label":"Confidence Threshold","type":"number","required":true},{"key":"analyst","label":"Pricing Analyst","type":"text","required":true}],
-      "states":["queued","modeling","insufficient-data","analyst-review","approved"],"transitions":[{"id":"model","label":"Estimate Elasticity","from":["queued"],"to":"modeling"},{"id":"insufficient","label":"Flag Insufficient Data","from":["modeling"],"to":"insufficient-data"},{"id":"review","label":"Start Analyst Review","from":["modeling"],"to":"analyst-review"},{"id":"approve","label":"Approve Estimate","from":["analyst-review"],"to":"approved"},{"id":"retry","label":"Retry with More Data","from":["insufficient-data"],"to":"modeling"}],
-      "seeds":[{"id":"elasticity-1001","state":"queued","productRef":"SKU-DO-401","historyWeeks":26,"modelMode":"Local regression","confidenceThreshold":80,"analyst":"Sydney Long"}]
+      "id": "elasticity-model",
+      "title": "Price Elasticity Analysis",
+      "description": "Estimate demand response to price changes, document data sufficiency, and require analyst validation.",
+      "fields": [
+        {
+          "key": "productRef",
+          "label": "Product Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "historyWeeks",
+          "label": "History Weeks",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "modelMode",
+          "label": "Model Mode",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Local regression",
+            "Manual estimate",
+            "Configured AI provider"
+          ]
+        },
+        {
+          "key": "confidenceThreshold",
+          "label": "Confidence Threshold",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "analyst",
+          "label": "Pricing Analyst",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "states": [
+        "queued",
+        "modeling",
+        "insufficient-data",
+        "analyst-review",
+        "approved"
+      ],
+      "transitions": [
+        {
+          "id": "model",
+          "label": "Estimate Elasticity",
+          "from": [
+            "queued"
+          ],
+          "to": "modeling"
+        },
+        {
+          "id": "insufficient",
+          "label": "Flag Insufficient Data",
+          "from": [
+            "modeling"
+          ],
+          "to": "insufficient-data"
+        },
+        {
+          "id": "review",
+          "label": "Start Analyst Review",
+          "from": [
+            "modeling"
+          ],
+          "to": "analyst-review"
+        },
+        {
+          "id": "approve",
+          "label": "Approve Estimate",
+          "from": [
+            "analyst-review"
+          ],
+          "to": "approved"
+        },
+        {
+          "id": "retry",
+          "label": "Retry with More Data",
+          "from": [
+            "insufficient-data"
+          ],
+          "to": "modeling"
+        }
+      ],
+      "seeds": [
+        {
+          "id": "elasticity-model-001",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — North Region — North Region",
+          "historyWeeks": 26.0,
+          "modelMode": "Local regression",
+          "confidenceThreshold": 80.0,
+          "analyst": "Avery Morgan"
+        },
+        {
+          "id": "elasticity-model-002",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Enterprise Account — Enterprise Account",
+          "historyWeeks": 28.0,
+          "modelMode": "Manual estimate",
+          "confidenceThreshold": 82.0,
+          "analyst": "Jordan Lee"
+        },
+        {
+          "id": "elasticity-model-003",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Quarterly Cycle — Quarterly Cycle",
+          "historyWeeks": 30.0,
+          "modelMode": "Configured AI provider",
+          "confidenceThreshold": 84.0,
+          "analyst": "Taylor Brooks"
+        },
+        {
+          "id": "elasticity-model-004",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Priority Queue — Priority Queue",
+          "historyWeeks": 32.0,
+          "modelMode": "Local regression",
+          "confidenceThreshold": 86.0,
+          "analyst": "Morgan Chen"
+        },
+        {
+          "id": "elasticity-model-005",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Operations Review — Operations Review",
+          "historyWeeks": 34.0,
+          "modelMode": "Manual estimate",
+          "confidenceThreshold": 88.0,
+          "analyst": "Riley Patel"
+        },
+        {
+          "id": "elasticity-model-006",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Customer Request — Customer Request",
+          "historyWeeks": 36.0,
+          "modelMode": "Configured AI provider",
+          "confidenceThreshold": 90.0,
+          "analyst": "Casey Nguyen"
+        },
+        {
+          "id": "elasticity-model-007",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Compliance Check — Compliance Check",
+          "historyWeeks": 38.0,
+          "modelMode": "Local regression",
+          "confidenceThreshold": 92.0,
+          "analyst": "Cameron Diaz"
+        },
+        {
+          "id": "elasticity-model-008",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Service Window — Service Window",
+          "historyWeeks": 40.0,
+          "modelMode": "Manual estimate",
+          "confidenceThreshold": 94.0,
+          "analyst": "Drew Wilson"
+        },
+        {
+          "id": "elasticity-model-009",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Quality Sample — Quality Sample",
+          "historyWeeks": 42.0,
+          "modelMode": "Configured AI provider",
+          "confidenceThreshold": 96.0,
+          "analyst": "Emerson Clark"
+        },
+        {
+          "id": "elasticity-model-010",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Management Review — Management Review",
+          "historyWeeks": 44.0,
+          "modelMode": "Local regression",
+          "confidenceThreshold": 98.0,
+          "analyst": "Hayden Kim"
+        },
+        {
+          "id": "elasticity-model-011",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Exception Follow-up — Exception Follow-up",
+          "historyWeeks": 46.0,
+          "modelMode": "Manual estimate",
+          "confidenceThreshold": 100.0,
+          "analyst": "Jamie Rivera"
+        },
+        {
+          "id": "elasticity-model-012",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Evidence Package — Evidence Package",
+          "historyWeeks": 48.0,
+          "modelMode": "Configured AI provider",
+          "confidenceThreshold": 102.0,
+          "analyst": "Kai Thompson"
+        },
+        {
+          "id": "elasticity-model-013",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Planning Cycle — Planning Cycle",
+          "historyWeeks": 50.0,
+          "modelMode": "Local regression",
+          "confidenceThreshold": 104.0,
+          "analyst": "Logan Shah"
+        },
+        {
+          "id": "elasticity-model-014",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Performance Review — Performance Review",
+          "historyWeeks": 52.0,
+          "modelMode": "Manual estimate",
+          "confidenceThreshold": 106.0,
+          "analyst": "Parker Evans"
+        },
+        {
+          "id": "elasticity-model-015",
+          "state": "queued",
+          "productRef": "SKU-DO-401 — Final Verification — Final Verification",
+          "historyWeeks": 54.0,
+          "modelMode": "Configured AI provider",
+          "confidenceThreshold": 108.0,
+          "analyst": "Quinn Murphy"
+        }
+      ]
     },
     {
-      "id":"price-recommendation","title":"Price Recommendation","description":"Recommend a bounded price from cost, demand, elasticity, competitor observations, and margin requirements.",
-      "fields":[{"key":"productRef","label":"Product Reference","type":"text","required":true},{"key":"unitCost","label":"Unit Cost","type":"number","required":true},{"key":"currentPrice","label":"Current Price","type":"number","required":true},{"key":"minimumMarginPct","label":"Minimum Margin Percent","type":"number","required":true},{"key":"recommendationMode","label":"Recommendation Mode","type":"select","required":true,"options":["Local optimizer","Manual analysis","Configured AI provider"]}],
-      "states":["draft","optimizing","review","approved","rejected"],"transitions":[{"id":"optimize","label":"Optimize Price","from":["draft"],"to":"optimizing"},{"id":"review","label":"Review Recommendation","from":["optimizing"],"to":"review"},{"id":"approve","label":"Approve Price","from":["review"],"to":"approved"},{"id":"reject","label":"Reject Recommendation","from":["review"],"to":"rejected"}],
-      "seeds":[{"id":"price-rec-1001","state":"draft","productRef":"SKU-DO-401","unitCost":14.25,"currentPrice":29.99,"minimumMarginPct":45,"recommendationMode":"Local optimizer"}]
+      "id": "price-recommendation",
+      "title": "Price Recommendation",
+      "description": "Recommend a bounded price from cost, demand, elasticity, competitor observations, and margin requirements.",
+      "fields": [
+        {
+          "key": "productRef",
+          "label": "Product Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "unitCost",
+          "label": "Unit Cost",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "currentPrice",
+          "label": "Current Price",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "minimumMarginPct",
+          "label": "Minimum Margin Percent",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "recommendationMode",
+          "label": "Recommendation Mode",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Local optimizer",
+            "Manual analysis",
+            "Configured AI provider"
+          ]
+        }
+      ],
+      "states": [
+        "draft",
+        "optimizing",
+        "review",
+        "approved",
+        "rejected"
+      ],
+      "transitions": [
+        {
+          "id": "optimize",
+          "label": "Optimize Price",
+          "from": [
+            "draft"
+          ],
+          "to": "optimizing"
+        },
+        {
+          "id": "review",
+          "label": "Review Recommendation",
+          "from": [
+            "optimizing"
+          ],
+          "to": "review"
+        },
+        {
+          "id": "approve",
+          "label": "Approve Price",
+          "from": [
+            "review"
+          ],
+          "to": "approved"
+        },
+        {
+          "id": "reject",
+          "label": "Reject Recommendation",
+          "from": [
+            "review"
+          ],
+          "to": "rejected"
+        }
+      ],
+      "seeds": [
+        {
+          "id": "price-recommendation-001",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — North Region — North Region",
+          "unitCost": 14.25,
+          "currentPrice": 29.99,
+          "minimumMarginPct": 45.0,
+          "recommendationMode": "Local optimizer"
+        },
+        {
+          "id": "price-recommendation-002",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Enterprise Account — Enterprise Account",
+          "unitCost": 16.25,
+          "currentPrice": 31.99,
+          "minimumMarginPct": 47.0,
+          "recommendationMode": "Manual analysis"
+        },
+        {
+          "id": "price-recommendation-003",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Quarterly Cycle — Quarterly Cycle",
+          "unitCost": 18.25,
+          "currentPrice": 33.989999999999995,
+          "minimumMarginPct": 49.0,
+          "recommendationMode": "Configured AI provider"
+        },
+        {
+          "id": "price-recommendation-004",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Priority Queue — Priority Queue",
+          "unitCost": 20.25,
+          "currentPrice": 35.989999999999995,
+          "minimumMarginPct": 51.0,
+          "recommendationMode": "Local optimizer"
+        },
+        {
+          "id": "price-recommendation-005",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Operations Review — Operations Review",
+          "unitCost": 22.25,
+          "currentPrice": 37.989999999999995,
+          "minimumMarginPct": 53.0,
+          "recommendationMode": "Manual analysis"
+        },
+        {
+          "id": "price-recommendation-006",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Customer Request — Customer Request",
+          "unitCost": 24.25,
+          "currentPrice": 39.989999999999995,
+          "minimumMarginPct": 55.0,
+          "recommendationMode": "Configured AI provider"
+        },
+        {
+          "id": "price-recommendation-007",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Compliance Check — Compliance Check",
+          "unitCost": 26.25,
+          "currentPrice": 41.989999999999995,
+          "minimumMarginPct": 57.0,
+          "recommendationMode": "Local optimizer"
+        },
+        {
+          "id": "price-recommendation-008",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Service Window — Service Window",
+          "unitCost": 28.25,
+          "currentPrice": 43.989999999999995,
+          "minimumMarginPct": 59.0,
+          "recommendationMode": "Manual analysis"
+        },
+        {
+          "id": "price-recommendation-009",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Quality Sample — Quality Sample",
+          "unitCost": 30.25,
+          "currentPrice": 45.989999999999995,
+          "minimumMarginPct": 61.0,
+          "recommendationMode": "Configured AI provider"
+        },
+        {
+          "id": "price-recommendation-010",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Management Review — Management Review",
+          "unitCost": 32.25,
+          "currentPrice": 47.989999999999995,
+          "minimumMarginPct": 63.0,
+          "recommendationMode": "Local optimizer"
+        },
+        {
+          "id": "price-recommendation-011",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Exception Follow-up — Exception Follow-up",
+          "unitCost": 34.25,
+          "currentPrice": 49.989999999999995,
+          "minimumMarginPct": 65.0,
+          "recommendationMode": "Manual analysis"
+        },
+        {
+          "id": "price-recommendation-012",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Evidence Package — Evidence Package",
+          "unitCost": 36.25,
+          "currentPrice": 51.989999999999995,
+          "minimumMarginPct": 67.0,
+          "recommendationMode": "Configured AI provider"
+        },
+        {
+          "id": "price-recommendation-013",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Planning Cycle — Planning Cycle",
+          "unitCost": 38.25,
+          "currentPrice": 53.989999999999995,
+          "minimumMarginPct": 69.0,
+          "recommendationMode": "Local optimizer"
+        },
+        {
+          "id": "price-recommendation-014",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Performance Review — Performance Review",
+          "unitCost": 40.25,
+          "currentPrice": 55.989999999999995,
+          "minimumMarginPct": 71.0,
+          "recommendationMode": "Manual analysis"
+        },
+        {
+          "id": "price-recommendation-015",
+          "state": "draft",
+          "productRef": "SKU-DO-401 — Final Verification — Final Verification",
+          "unitCost": 42.25,
+          "currentPrice": 57.989999999999995,
+          "minimumMarginPct": 73.0,
+          "recommendationMode": "Configured AI provider"
+        }
+      ]
     },
     {
-      "id":"promotion-optimization","title":"Promotion and Discount Optimization","description":"Design a bounded promotion with inventory, margin, audience, and timing controls before approval.",
-      "fields":[{"key":"campaignRef","label":"Campaign Reference","type":"text","required":true},{"key":"productScope","label":"Product Scope","type":"text","required":true},{"key":"maxDiscountPct","label":"Maximum Discount Percent","type":"number","required":true},{"key":"startDate","label":"Start Date","type":"date","required":true},{"key":"objective","label":"Objective","type":"select","required":true,"options":["Revenue","Margin","Inventory clearance","Customer acquisition"]}],
-      "states":["draft","simulating","review","approved","scheduled","rejected"],"transitions":[{"id":"simulate","label":"Simulate Promotion","from":["draft"],"to":"simulating"},{"id":"review","label":"Review Promotion","from":["simulating"],"to":"review"},{"id":"approve","label":"Approve Promotion","from":["review"],"to":"approved"},{"id":"schedule","label":"Schedule Promotion","from":["approved"],"to":"scheduled"},{"id":"reject","label":"Reject Promotion","from":["review"],"to":"rejected"}],
-      "seeds":[{"id":"promotion-1001","state":"draft","campaignRef":"PROMO-BTS-2026","productScope":"Desk organizers and monitor stands","maxDiscountPct":15,"startDate":"2026-08-10","objective":"Revenue"}]
+      "id": "promotion-optimization",
+      "title": "Promotion and Discount Optimization",
+      "description": "Design a bounded promotion with inventory, margin, audience, and timing controls before approval.",
+      "fields": [
+        {
+          "key": "campaignRef",
+          "label": "Campaign Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "productScope",
+          "label": "Product Scope",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "maxDiscountPct",
+          "label": "Maximum Discount Percent",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "startDate",
+          "label": "Start Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "objective",
+          "label": "Objective",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Revenue",
+            "Margin",
+            "Inventory clearance",
+            "Customer acquisition"
+          ]
+        }
+      ],
+      "states": [
+        "draft",
+        "simulating",
+        "review",
+        "approved",
+        "scheduled",
+        "rejected"
+      ],
+      "transitions": [
+        {
+          "id": "simulate",
+          "label": "Simulate Promotion",
+          "from": [
+            "draft"
+          ],
+          "to": "simulating"
+        },
+        {
+          "id": "review",
+          "label": "Review Promotion",
+          "from": [
+            "simulating"
+          ],
+          "to": "review"
+        },
+        {
+          "id": "approve",
+          "label": "Approve Promotion",
+          "from": [
+            "review"
+          ],
+          "to": "approved"
+        },
+        {
+          "id": "schedule",
+          "label": "Schedule Promotion",
+          "from": [
+            "approved"
+          ],
+          "to": "scheduled"
+        },
+        {
+          "id": "reject",
+          "label": "Reject Promotion",
+          "from": [
+            "review"
+          ],
+          "to": "rejected"
+        }
+      ],
+      "seeds": [
+        {
+          "id": "promotion-optimization-001",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — North Region — North Region",
+          "productScope": "Desk organizers and monitor stands — North Region — North Region",
+          "maxDiscountPct": 15.0,
+          "startDate": "2026-08-10",
+          "objective": "Revenue"
+        },
+        {
+          "id": "promotion-optimization-002",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Enterprise Account — Enterprise Account",
+          "productScope": "Desk organizers and monitor stands — Enterprise Account — Enterprise Account",
+          "maxDiscountPct": 17.0,
+          "startDate": "2026-08-12",
+          "objective": "Margin"
+        },
+        {
+          "id": "promotion-optimization-003",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Quarterly Cycle — Quarterly Cycle",
+          "productScope": "Desk organizers and monitor stands — Quarterly Cycle — Quarterly Cycle",
+          "maxDiscountPct": 19.0,
+          "startDate": "2026-08-14",
+          "objective": "Inventory clearance"
+        },
+        {
+          "id": "promotion-optimization-004",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Priority Queue — Priority Queue",
+          "productScope": "Desk organizers and monitor stands — Priority Queue — Priority Queue",
+          "maxDiscountPct": 21.0,
+          "startDate": "2026-08-16",
+          "objective": "Customer acquisition"
+        },
+        {
+          "id": "promotion-optimization-005",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Operations Review — Operations Review",
+          "productScope": "Desk organizers and monitor stands — Operations Review — Operations Review",
+          "maxDiscountPct": 23.0,
+          "startDate": "2026-08-18",
+          "objective": "Revenue"
+        },
+        {
+          "id": "promotion-optimization-006",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Customer Request — Customer Request",
+          "productScope": "Desk organizers and monitor stands — Customer Request — Customer Request",
+          "maxDiscountPct": 25.0,
+          "startDate": "2026-08-20",
+          "objective": "Margin"
+        },
+        {
+          "id": "promotion-optimization-007",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Compliance Check — Compliance Check",
+          "productScope": "Desk organizers and monitor stands — Compliance Check — Compliance Check",
+          "maxDiscountPct": 27.0,
+          "startDate": "2026-08-22",
+          "objective": "Inventory clearance"
+        },
+        {
+          "id": "promotion-optimization-008",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Service Window — Service Window",
+          "productScope": "Desk organizers and monitor stands — Service Window — Service Window",
+          "maxDiscountPct": 29.0,
+          "startDate": "2026-08-24",
+          "objective": "Customer acquisition"
+        },
+        {
+          "id": "promotion-optimization-009",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Quality Sample — Quality Sample",
+          "productScope": "Desk organizers and monitor stands — Quality Sample — Quality Sample",
+          "maxDiscountPct": 31.0,
+          "startDate": "2026-08-26",
+          "objective": "Revenue"
+        },
+        {
+          "id": "promotion-optimization-010",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Management Review — Management Review",
+          "productScope": "Desk organizers and monitor stands — Management Review — Management Review",
+          "maxDiscountPct": 33.0,
+          "startDate": "2026-08-28",
+          "objective": "Margin"
+        },
+        {
+          "id": "promotion-optimization-011",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Exception Follow-up — Exception Follow-up",
+          "productScope": "Desk organizers and monitor stands — Exception Follow-up — Exception Follow-up",
+          "maxDiscountPct": 35.0,
+          "startDate": "2026-08-30",
+          "objective": "Inventory clearance"
+        },
+        {
+          "id": "promotion-optimization-012",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Evidence Package — Evidence Package",
+          "productScope": "Desk organizers and monitor stands — Evidence Package — Evidence Package",
+          "maxDiscountPct": 37.0,
+          "startDate": "2026-09-01",
+          "objective": "Customer acquisition"
+        },
+        {
+          "id": "promotion-optimization-013",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Planning Cycle — Planning Cycle",
+          "productScope": "Desk organizers and monitor stands — Planning Cycle — Planning Cycle",
+          "maxDiscountPct": 39.0,
+          "startDate": "2026-09-03",
+          "objective": "Revenue"
+        },
+        {
+          "id": "promotion-optimization-014",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Performance Review — Performance Review",
+          "productScope": "Desk organizers and monitor stands — Performance Review — Performance Review",
+          "maxDiscountPct": 41.0,
+          "startDate": "2026-09-05",
+          "objective": "Margin"
+        },
+        {
+          "id": "promotion-optimization-015",
+          "state": "draft",
+          "campaignRef": "PROMO-BTS-2026 — Final Verification — Final Verification",
+          "productScope": "Desk organizers and monitor stands — Final Verification — Final Verification",
+          "maxDiscountPct": 43.0,
+          "startDate": "2026-09-07",
+          "objective": "Inventory clearance"
+        }
+      ]
     },
     {
-      "id":"approval-rollout","title":"Price Approval and Rollout","description":"Route proposed prices through commercial approval and record local export or configured channel publication status.",
-      "fields":[{"key":"changeSetRef","label":"Change Set","type":"text","required":true},{"key":"itemCount","label":"Item Count","type":"number","required":true},{"key":"approver","label":"Commercial Approver","type":"text","required":true},{"key":"rolloutChannel","label":"Rollout Channel","type":"select","required":true,"options":["Local export","Manual commerce update","Configured commerce integration"]},{"key":"providerStatus","label":"Provider Status","type":"select","required":true,"options":["Not required","Not configured","Configured"]}],
-      "states":["pending","review","approved","exported","published","failed","rolled-back"],"transitions":[{"id":"review","label":"Start Approval","from":["pending"],"to":"review"},{"id":"approve","label":"Approve Changes","from":["review"],"to":"approved"},{"id":"export","label":"Export Change Set","from":["approved"],"to":"exported"},{"id":"publish","label":"Record Publication","from":["exported"],"to":"published"},{"id":"fail","label":"Record Failure","from":["exported"],"to":"failed"},{"id":"rollback","label":"Record Rollback","from":["published","failed"],"to":"rolled-back"}],
-      "seeds":[{"id":"rollout-1001","state":"pending","changeSetRef":"PRICESET-2026-0713-A","itemCount":24,"approver":"Category Director","rolloutChannel":"Local export","providerStatus":"Not required"}]
+      "id": "approval-rollout",
+      "title": "Price Approval and Rollout",
+      "description": "Route proposed prices through commercial approval and record local export or configured channel publication status.",
+      "fields": [
+        {
+          "key": "changeSetRef",
+          "label": "Change Set",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "itemCount",
+          "label": "Item Count",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "approver",
+          "label": "Commercial Approver",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "rolloutChannel",
+          "label": "Rollout Channel",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Local export",
+            "Manual commerce update",
+            "Configured commerce integration"
+          ]
+        },
+        {
+          "key": "providerStatus",
+          "label": "Provider Status",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Not required",
+            "Not configured",
+            "Configured"
+          ]
+        }
+      ],
+      "states": [
+        "pending",
+        "review",
+        "approved",
+        "exported",
+        "published",
+        "failed",
+        "rolled-back"
+      ],
+      "transitions": [
+        {
+          "id": "review",
+          "label": "Start Approval",
+          "from": [
+            "pending"
+          ],
+          "to": "review"
+        },
+        {
+          "id": "approve",
+          "label": "Approve Changes",
+          "from": [
+            "review"
+          ],
+          "to": "approved"
+        },
+        {
+          "id": "export",
+          "label": "Export Change Set",
+          "from": [
+            "approved"
+          ],
+          "to": "exported"
+        },
+        {
+          "id": "publish",
+          "label": "Record Publication",
+          "from": [
+            "exported"
+          ],
+          "to": "published"
+        },
+        {
+          "id": "fail",
+          "label": "Record Failure",
+          "from": [
+            "exported"
+          ],
+          "to": "failed"
+        },
+        {
+          "id": "rollback",
+          "label": "Record Rollback",
+          "from": [
+            "published",
+            "failed"
+          ],
+          "to": "rolled-back"
+        }
+      ],
+      "seeds": [
+        {
+          "id": "approval-rollout-001",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — North Region — North Region",
+          "itemCount": 24.0,
+          "approver": "Category Director — North Region — North Region",
+          "rolloutChannel": "Local export",
+          "providerStatus": "Not required"
+        },
+        {
+          "id": "approval-rollout-002",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Enterprise Account — Enterprise Account",
+          "itemCount": 26.0,
+          "approver": "Category Director — Enterprise Account — Enterprise Account",
+          "rolloutChannel": "Manual commerce update",
+          "providerStatus": "Not configured"
+        },
+        {
+          "id": "approval-rollout-003",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Quarterly Cycle — Quarterly Cycle",
+          "itemCount": 28.0,
+          "approver": "Category Director — Quarterly Cycle — Quarterly Cycle",
+          "rolloutChannel": "Configured commerce integration",
+          "providerStatus": "Configured"
+        },
+        {
+          "id": "approval-rollout-004",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Priority Queue — Priority Queue",
+          "itemCount": 30.0,
+          "approver": "Category Director — Priority Queue — Priority Queue",
+          "rolloutChannel": "Local export",
+          "providerStatus": "Not required"
+        },
+        {
+          "id": "approval-rollout-005",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Operations Review — Operations Review",
+          "itemCount": 32.0,
+          "approver": "Category Director — Operations Review — Operations Review",
+          "rolloutChannel": "Manual commerce update",
+          "providerStatus": "Not configured"
+        },
+        {
+          "id": "approval-rollout-006",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Customer Request — Customer Request",
+          "itemCount": 34.0,
+          "approver": "Category Director — Customer Request — Customer Request",
+          "rolloutChannel": "Configured commerce integration",
+          "providerStatus": "Configured"
+        },
+        {
+          "id": "approval-rollout-007",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Compliance Check — Compliance Check",
+          "itemCount": 36.0,
+          "approver": "Category Director — Compliance Check — Compliance Check",
+          "rolloutChannel": "Local export",
+          "providerStatus": "Not required"
+        },
+        {
+          "id": "approval-rollout-008",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Service Window — Service Window",
+          "itemCount": 38.0,
+          "approver": "Category Director — Service Window — Service Window",
+          "rolloutChannel": "Manual commerce update",
+          "providerStatus": "Not configured"
+        },
+        {
+          "id": "approval-rollout-009",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Quality Sample — Quality Sample",
+          "itemCount": 40.0,
+          "approver": "Category Director — Quality Sample — Quality Sample",
+          "rolloutChannel": "Configured commerce integration",
+          "providerStatus": "Configured"
+        },
+        {
+          "id": "approval-rollout-010",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Management Review — Management Review",
+          "itemCount": 42.0,
+          "approver": "Category Director — Management Review — Management Review",
+          "rolloutChannel": "Local export",
+          "providerStatus": "Not required"
+        },
+        {
+          "id": "approval-rollout-011",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Exception Follow-up — Exception Follow-up",
+          "itemCount": 44.0,
+          "approver": "Category Director — Exception Follow-up — Exception Follow-up",
+          "rolloutChannel": "Manual commerce update",
+          "providerStatus": "Not configured"
+        },
+        {
+          "id": "approval-rollout-012",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Evidence Package — Evidence Package",
+          "itemCount": 46.0,
+          "approver": "Category Director — Evidence Package — Evidence Package",
+          "rolloutChannel": "Configured commerce integration",
+          "providerStatus": "Configured"
+        },
+        {
+          "id": "approval-rollout-013",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Planning Cycle — Planning Cycle",
+          "itemCount": 48.0,
+          "approver": "Category Director — Planning Cycle — Planning Cycle",
+          "rolloutChannel": "Local export",
+          "providerStatus": "Not required"
+        },
+        {
+          "id": "approval-rollout-014",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Performance Review — Performance Review",
+          "itemCount": 50.0,
+          "approver": "Category Director — Performance Review — Performance Review",
+          "rolloutChannel": "Manual commerce update",
+          "providerStatus": "Not configured"
+        },
+        {
+          "id": "approval-rollout-015",
+          "state": "pending",
+          "changeSetRef": "PRICESET-2026-0713-A — Final Verification — Final Verification",
+          "itemCount": 52.0,
+          "approver": "Category Director — Final Verification — Final Verification",
+          "rolloutChannel": "Configured commerce integration",
+          "providerStatus": "Configured"
+        }
+      ]
     },
     {
-      "id":"experiment-monitoring","title":"Pricing Experiment Monitoring","description":"Define a controlled price test, monitor guardrails, and record a stop, extend, or adopt decision.",
-      "fields":[{"key":"experimentRef","label":"Experiment Reference","type":"text","required":true},{"key":"testScope","label":"Test Scope","type":"text","required":true},{"key":"primaryMetric","label":"Primary Metric","type":"select","required":true,"options":["Conversion","Revenue per visitor","Gross margin","Units sold"]},{"key":"guardrail","label":"Guardrail Threshold","type":"number","required":true},{"key":"endDate","label":"End Date","type":"date","required":true}],
-      "states":["draft","approved","running","paused","analysis","adopted","stopped"],"transitions":[{"id":"approve","label":"Approve Experiment","from":["draft"],"to":"approved"},{"id":"start","label":"Start Experiment","from":["approved","paused"],"to":"running"},{"id":"pause","label":"Pause Experiment","from":["running"],"to":"paused"},{"id":"analyze","label":"Analyze Results","from":["running","paused"],"to":"analysis"},{"id":"adopt","label":"Adopt Winner","from":["analysis"],"to":"adopted"},{"id":"stop","label":"Stop Experiment","from":["running","paused","analysis"],"to":"stopped"}],
-      "seeds":[{"id":"experiment-1001","state":"draft","experimentRef":"EXP-PRICE-034","testScope":"10 percent of desk-organizer traffic","primaryMetric":"Gross margin","guardrail":40,"endDate":"2026-08-05"}]
+      "id": "experiment-monitoring",
+      "title": "Pricing Experiment Monitoring",
+      "description": "Define a controlled price test, monitor guardrails, and record a stop, extend, or adopt decision.",
+      "fields": [
+        {
+          "key": "experimentRef",
+          "label": "Experiment Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "testScope",
+          "label": "Test Scope",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "primaryMetric",
+          "label": "Primary Metric",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Conversion",
+            "Revenue per visitor",
+            "Gross margin",
+            "Units sold"
+          ]
+        },
+        {
+          "key": "guardrail",
+          "label": "Guardrail Threshold",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "endDate",
+          "label": "End Date",
+          "type": "date",
+          "required": true
+        }
+      ],
+      "states": [
+        "draft",
+        "approved",
+        "running",
+        "paused",
+        "analysis",
+        "adopted",
+        "stopped"
+      ],
+      "transitions": [
+        {
+          "id": "approve",
+          "label": "Approve Experiment",
+          "from": [
+            "draft"
+          ],
+          "to": "approved"
+        },
+        {
+          "id": "start",
+          "label": "Start Experiment",
+          "from": [
+            "approved",
+            "paused"
+          ],
+          "to": "running"
+        },
+        {
+          "id": "pause",
+          "label": "Pause Experiment",
+          "from": [
+            "running"
+          ],
+          "to": "paused"
+        },
+        {
+          "id": "analyze",
+          "label": "Analyze Results",
+          "from": [
+            "running",
+            "paused"
+          ],
+          "to": "analysis"
+        },
+        {
+          "id": "adopt",
+          "label": "Adopt Winner",
+          "from": [
+            "analysis"
+          ],
+          "to": "adopted"
+        },
+        {
+          "id": "stop",
+          "label": "Stop Experiment",
+          "from": [
+            "running",
+            "paused",
+            "analysis"
+          ],
+          "to": "stopped"
+        }
+      ],
+      "seeds": [
+        {
+          "id": "experiment-monitoring-001",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — North Region — North Region",
+          "testScope": "10 percent of desk-organizer traffic — North Region — North Region",
+          "primaryMetric": "Conversion",
+          "guardrail": 40.0,
+          "endDate": "2026-08-05"
+        },
+        {
+          "id": "experiment-monitoring-002",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Enterprise Account — Enterprise Account",
+          "testScope": "10 percent of desk-organizer traffic — Enterprise Account — Enterprise Account",
+          "primaryMetric": "Revenue per visitor",
+          "guardrail": 42.0,
+          "endDate": "2026-08-07"
+        },
+        {
+          "id": "experiment-monitoring-003",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Quarterly Cycle — Quarterly Cycle",
+          "testScope": "10 percent of desk-organizer traffic — Quarterly Cycle — Quarterly Cycle",
+          "primaryMetric": "Gross margin",
+          "guardrail": 44.0,
+          "endDate": "2026-08-09"
+        },
+        {
+          "id": "experiment-monitoring-004",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Priority Queue — Priority Queue",
+          "testScope": "10 percent of desk-organizer traffic — Priority Queue — Priority Queue",
+          "primaryMetric": "Units sold",
+          "guardrail": 46.0,
+          "endDate": "2026-08-11"
+        },
+        {
+          "id": "experiment-monitoring-005",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Operations Review — Operations Review",
+          "testScope": "10 percent of desk-organizer traffic — Operations Review — Operations Review",
+          "primaryMetric": "Conversion",
+          "guardrail": 48.0,
+          "endDate": "2026-08-13"
+        },
+        {
+          "id": "experiment-monitoring-006",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Customer Request — Customer Request",
+          "testScope": "10 percent of desk-organizer traffic — Customer Request — Customer Request",
+          "primaryMetric": "Revenue per visitor",
+          "guardrail": 50.0,
+          "endDate": "2026-08-15"
+        },
+        {
+          "id": "experiment-monitoring-007",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Compliance Check — Compliance Check",
+          "testScope": "10 percent of desk-organizer traffic — Compliance Check — Compliance Check",
+          "primaryMetric": "Gross margin",
+          "guardrail": 52.0,
+          "endDate": "2026-08-17"
+        },
+        {
+          "id": "experiment-monitoring-008",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Service Window — Service Window",
+          "testScope": "10 percent of desk-organizer traffic — Service Window — Service Window",
+          "primaryMetric": "Units sold",
+          "guardrail": 54.0,
+          "endDate": "2026-08-19"
+        },
+        {
+          "id": "experiment-monitoring-009",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Quality Sample — Quality Sample",
+          "testScope": "10 percent of desk-organizer traffic — Quality Sample — Quality Sample",
+          "primaryMetric": "Conversion",
+          "guardrail": 56.0,
+          "endDate": "2026-08-21"
+        },
+        {
+          "id": "experiment-monitoring-010",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Management Review — Management Review",
+          "testScope": "10 percent of desk-organizer traffic — Management Review — Management Review",
+          "primaryMetric": "Revenue per visitor",
+          "guardrail": 58.0,
+          "endDate": "2026-08-23"
+        },
+        {
+          "id": "experiment-monitoring-011",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Exception Follow-up — Exception Follow-up",
+          "testScope": "10 percent of desk-organizer traffic — Exception Follow-up — Exception Follow-up",
+          "primaryMetric": "Gross margin",
+          "guardrail": 60.0,
+          "endDate": "2026-08-25"
+        },
+        {
+          "id": "experiment-monitoring-012",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Evidence Package — Evidence Package",
+          "testScope": "10 percent of desk-organizer traffic — Evidence Package — Evidence Package",
+          "primaryMetric": "Units sold",
+          "guardrail": 62.0,
+          "endDate": "2026-08-27"
+        },
+        {
+          "id": "experiment-monitoring-013",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Planning Cycle — Planning Cycle",
+          "testScope": "10 percent of desk-organizer traffic — Planning Cycle — Planning Cycle",
+          "primaryMetric": "Conversion",
+          "guardrail": 64.0,
+          "endDate": "2026-08-29"
+        },
+        {
+          "id": "experiment-monitoring-014",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Performance Review — Performance Review",
+          "testScope": "10 percent of desk-organizer traffic — Performance Review — Performance Review",
+          "primaryMetric": "Revenue per visitor",
+          "guardrail": 66.0,
+          "endDate": "2026-08-31"
+        },
+        {
+          "id": "experiment-monitoring-015",
+          "state": "draft",
+          "experimentRef": "EXP-PRICE-034 — Final Verification — Final Verification",
+          "testScope": "10 percent of desk-organizer traffic — Final Verification — Final Verification",
+          "primaryMetric": "Gross margin",
+          "guardrail": 68.0,
+          "endDate": "2026-09-02"
+        }
+      ]
     },
     {
-      "id":"margin-reporting","title":"Pricing and Margin Reporting","description":"Report realized price, volume, discounts, gross margin, and rollout exceptions for a defined commercial period.",
-      "fields":[{"key":"period","label":"Reporting Period","type":"text","required":true},{"key":"scope","label":"Report Scope","type":"select","required":true,"options":["Product","Category","Channel","Enterprise"]},{"key":"format","label":"Report Format","type":"select","required":true,"options":["PDF","CSV","JSON"]},{"key":"dataSource","label":"Actuals Source","type":"select","required":true,"options":["Local sales fixture","Manual upload","Configured commerce feed"]},{"key":"owner","label":"Report Owner","type":"text","required":true}],
-      "states":["configured","calculating","variance-review","ready","published"],"transitions":[{"id":"calculate","label":"Calculate Performance","from":["configured"],"to":"calculating"},{"id":"review","label":"Review Variances","from":["calculating"],"to":"variance-review"},{"id":"ready","label":"Approve Report","from":["variance-review"],"to":"ready"},{"id":"publish","label":"Publish Locally","from":["ready"],"to":"published"}],
-      "seeds":[{"id":"margin-report-1001","state":"configured","period":"2026-06","scope":"Category","format":"PDF","dataSource":"Local sales fixture","owner":"Pricing Operations"}]
+      "id": "margin-reporting",
+      "title": "Pricing and Margin Reporting",
+      "description": "Report realized price, volume, discounts, gross margin, and rollout exceptions for a defined commercial period.",
+      "fields": [
+        {
+          "key": "period",
+          "label": "Reporting Period",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "scope",
+          "label": "Report Scope",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Product",
+            "Category",
+            "Channel",
+            "Enterprise"
+          ]
+        },
+        {
+          "key": "format",
+          "label": "Report Format",
+          "type": "select",
+          "required": true,
+          "options": [
+            "PDF",
+            "CSV",
+            "JSON"
+          ]
+        },
+        {
+          "key": "dataSource",
+          "label": "Actuals Source",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Local sales fixture",
+            "Manual upload",
+            "Configured commerce feed"
+          ]
+        },
+        {
+          "key": "owner",
+          "label": "Report Owner",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "states": [
+        "configured",
+        "calculating",
+        "variance-review",
+        "ready",
+        "published"
+      ],
+      "transitions": [
+        {
+          "id": "calculate",
+          "label": "Calculate Performance",
+          "from": [
+            "configured"
+          ],
+          "to": "calculating"
+        },
+        {
+          "id": "review",
+          "label": "Review Variances",
+          "from": [
+            "calculating"
+          ],
+          "to": "variance-review"
+        },
+        {
+          "id": "ready",
+          "label": "Approve Report",
+          "from": [
+            "variance-review"
+          ],
+          "to": "ready"
+        },
+        {
+          "id": "publish",
+          "label": "Publish Locally",
+          "from": [
+            "ready"
+          ],
+          "to": "published"
+        }
+      ],
+      "seeds": [
+        {
+          "id": "margin-reporting-001",
+          "state": "configured",
+          "period": "2026-06 — North Region — North Region",
+          "scope": "Product",
+          "format": "PDF",
+          "dataSource": "Local sales fixture",
+          "owner": "Avery Morgan"
+        },
+        {
+          "id": "margin-reporting-002",
+          "state": "configured",
+          "period": "2026-06 — Enterprise Account — Enterprise Account",
+          "scope": "Category",
+          "format": "CSV",
+          "dataSource": "Manual upload",
+          "owner": "Jordan Lee"
+        },
+        {
+          "id": "margin-reporting-003",
+          "state": "configured",
+          "period": "2026-06 — Quarterly Cycle — Quarterly Cycle",
+          "scope": "Channel",
+          "format": "JSON",
+          "dataSource": "Configured commerce feed",
+          "owner": "Taylor Brooks"
+        },
+        {
+          "id": "margin-reporting-004",
+          "state": "configured",
+          "period": "2026-06 — Priority Queue — Priority Queue",
+          "scope": "Enterprise",
+          "format": "PDF",
+          "dataSource": "Local sales fixture",
+          "owner": "Morgan Chen"
+        },
+        {
+          "id": "margin-reporting-005",
+          "state": "configured",
+          "period": "2026-06 — Operations Review — Operations Review",
+          "scope": "Product",
+          "format": "CSV",
+          "dataSource": "Manual upload",
+          "owner": "Riley Patel"
+        },
+        {
+          "id": "margin-reporting-006",
+          "state": "configured",
+          "period": "2026-06 — Customer Request — Customer Request",
+          "scope": "Category",
+          "format": "JSON",
+          "dataSource": "Configured commerce feed",
+          "owner": "Casey Nguyen"
+        },
+        {
+          "id": "margin-reporting-007",
+          "state": "configured",
+          "period": "2026-06 — Compliance Check — Compliance Check",
+          "scope": "Channel",
+          "format": "PDF",
+          "dataSource": "Local sales fixture",
+          "owner": "Cameron Diaz"
+        },
+        {
+          "id": "margin-reporting-008",
+          "state": "configured",
+          "period": "2026-06 — Service Window — Service Window",
+          "scope": "Enterprise",
+          "format": "CSV",
+          "dataSource": "Manual upload",
+          "owner": "Drew Wilson"
+        },
+        {
+          "id": "margin-reporting-009",
+          "state": "configured",
+          "period": "2026-06 — Quality Sample — Quality Sample",
+          "scope": "Product",
+          "format": "JSON",
+          "dataSource": "Configured commerce feed",
+          "owner": "Emerson Clark"
+        },
+        {
+          "id": "margin-reporting-010",
+          "state": "configured",
+          "period": "2026-06 — Management Review — Management Review",
+          "scope": "Category",
+          "format": "PDF",
+          "dataSource": "Local sales fixture",
+          "owner": "Hayden Kim"
+        },
+        {
+          "id": "margin-reporting-011",
+          "state": "configured",
+          "period": "2026-06 — Exception Follow-up — Exception Follow-up",
+          "scope": "Channel",
+          "format": "CSV",
+          "dataSource": "Manual upload",
+          "owner": "Jamie Rivera"
+        },
+        {
+          "id": "margin-reporting-012",
+          "state": "configured",
+          "period": "2026-06 — Evidence Package — Evidence Package",
+          "scope": "Enterprise",
+          "format": "JSON",
+          "dataSource": "Configured commerce feed",
+          "owner": "Kai Thompson"
+        },
+        {
+          "id": "margin-reporting-013",
+          "state": "configured",
+          "period": "2026-06 — Planning Cycle — Planning Cycle",
+          "scope": "Product",
+          "format": "PDF",
+          "dataSource": "Local sales fixture",
+          "owner": "Logan Shah"
+        },
+        {
+          "id": "margin-reporting-014",
+          "state": "configured",
+          "period": "2026-06 — Performance Review — Performance Review",
+          "scope": "Category",
+          "format": "CSV",
+          "dataSource": "Manual upload",
+          "owner": "Parker Evans"
+        },
+        {
+          "id": "margin-reporting-015",
+          "state": "configured",
+          "period": "2026-06 — Final Verification — Final Verification",
+          "scope": "Channel",
+          "format": "JSON",
+          "dataSource": "Configured commerce feed",
+          "owner": "Quinn Murphy"
+        }
+      ]
     }
   ]
 }

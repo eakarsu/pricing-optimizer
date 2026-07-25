@@ -10,10 +10,10 @@
     "AIPricingOptimizer",
     "AIWholesaleDistributionOptimizer"
   ],
-  "featureCount": 132,
-  "candidateFeatureCount": 199,
-  "eliminatedSimilarFeatures": 67,
-  "evidenceCount": 431,
+  "featureCount": 120,
+  "candidateFeatureCount": 193,
+  "eliminatedSimilarFeatures": 73,
+  "evidenceCount": 270,
   "aiPageCount": 0,
   "sourceAIPageCount": 0,
   "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
@@ -24,6 +24,6 @@
     "seededTables": 44,
     "seededRows": 691
   },
-  "visibleFeatureCount": 54,
+  "visibleFeatureCount": 41,
   "featureVisibilityMode": "seeded-or-ai"
 }
