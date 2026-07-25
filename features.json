@@ -52,6 +52,89 @@
     ]
   },
   {
+    "name": "AI Competitor Price Tracker",
+    "canonicalKey": "ai competitor price tracker",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/competitor-tracking"
+    ],
+    "sourceProjects": [
+      "AIPricingOptimizer"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/pricing-optimizer"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/CompetitorTracking.js:1",
+        "route": "/competitor-tracking",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      }
+    ]
+  },
+  {
+    "name": "AI Insights",
+    "canonicalKey": "ai insight",
+    "aliases": [],
+    "kinds": [
+      "ai-page",
+      "page"
+    ],
+    "routes": [
+      "/AIInsights",
+      "/ai-insights",
+      "/ai-insights?tool=ai-insights"
+    ],
+    "sourceProjects": [
+      "AIPricingOptimizer"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/pricing-optimizer"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/AIInsights.js:218",
+        "route": "/ai-insights?tool=ai-insights",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/App.js:84",
+        "route": "/ai-insights",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/components/Layout.js:23",
+        "route": "/ai-insights",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/AIInsights.js",
+        "route": "/AIInsights",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/Dashboard.js:171",
+        "route": "/ai-insights",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      }
+    ]
+  },
+  {
     "name": "AI Usage Stats",
     "canonicalKey": "ai stat usage",
     "aliases": [],
@@ -88,6 +171,118 @@
         "sourceProject": "AIPricingOptimizer",
         "path": "frontend/src/pages/AIUsageStats.js",
         "route": "/AIUsageStats",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      }
+    ]
+  },
+  {
+    "name": "Analyze",
+    "canonicalKey": "analyze",
+    "aliases": [],
+    "kinds": [
+      "ai-page",
+      "api"
+    ],
+    "routes": [
+      "/analyze",
+      "/bundle-recommendations?tool=analyze",
+      "/demand-forecasts?tool=analyze",
+      "/discount-optimizations?tool=analyze",
+      "/price-elasticity?tool=analyze"
+    ],
+    "sourceProjects": [
+      "AIFashionDesigner",
+      "AIPricingOptimizer"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/pricing-optimizer"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIFashionDesigner",
+        "path": "backend/routes/personalColorAnalysis.js:25",
+        "route": "/analyze",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/BundleRecommendations.js:1",
+        "route": "/bundle-recommendations?tool=analyze",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/DemandForecasts.js:1",
+        "route": "/demand-forecasts?tool=analyze",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/DiscountOptimizations.js:1",
+        "route": "/discount-optimizations?tool=analyze",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/PriceElasticity.js:1",
+        "route": "/price-elasticity?tool=analyze",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      }
+    ]
+  },
+  {
+    "name": "Analyze Deal",
+    "canonicalKey": "analyze deal",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/price-tracker?tool=analyze-deal"
+    ],
+    "sourceProjects": [
+      "AIPricingOptimizer"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/pricing-optimizer"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/PriceTracker.js:1",
+        "route": "/price-tracker?tool=analyze-deal",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      }
+    ]
+  },
+  {
+    "name": "Analyze Item",
+    "canonicalKey": "analyze item",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/price-elasticity?tool=analyze-item"
+    ],
+    "sourceProjects": [
+      "AIPricingOptimizer"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/pricing-optimizer"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/PriceElasticity.js:1",
+        "route": "/price-elasticity?tool=analyze-item",
         "originApp": "retail-commerce-consumer/pricing-optimizer"
       }
     ]
@@ -804,6 +999,32 @@
     ]
   },
   {
+    "name": "Competitor Analysis",
+    "canonicalKey": "analysis competitor",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/competitors"
+    ],
+    "sourceProjects": [
+      "AIPricingOptimizer"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/pricing-optimizer"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/Competitors.js:1",
+        "route": "/competitors",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      }
+    ]
+  },
+  {
     "name": "Competitor Tracking",
     "canonicalKey": "competitor tracking",
     "aliases": [],
@@ -1160,10 +1381,162 @@
     ]
   },
   {
+    "name": "Demand Forecasts",
+    "canonicalKey": "demand forecast",
+    "aliases": [
+      "Demand Forecast",
+      "Forecast Demand"
+    ],
+    "kinds": [
+      "api",
+      "page"
+    ],
+    "routes": [
+      "/DemandForecast",
+      "/DemandForecasts",
+      "/ai/demand-forecast",
+      "/demand-forecast",
+      "/demand-forecasts",
+      "/forecast-demand",
+      "ai/demand-forecast"
+    ],
+    "sourceProjects": [
+      "AIBakeryProductionManager",
+      "AIBreweryCraftBeverageOps",
+      "AIGhostKitchenNetworkManager",
+      "AIPricingOptimizer",
+      "AISubscriptionBoxCurator",
+      "AIVendingMachineNetworkManager",
+      "ai-food-flow-order"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/circular-economy-upcycling-marketplace",
+      "retail-commerce-consumer/food-bank-pantry-manager",
+      "retail-commerce-consumer/food-flow-order",
+      "retail-commerce-consumer/personal-stylist",
+      "retail-commerce-consumer/pricing-optimizer"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIVendingMachineNetworkManager",
+        "path": "backend/src/routes/ai.js:10",
+        "route": "/demand-forecast",
+        "originApp": "retail-commerce-consumer/circular-economy-upcycling-marketplace"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIVendingMachineNetworkManager",
+        "path": "frontend/src/App.jsx:72",
+        "route": "ai/demand-forecast",
+        "originApp": "retail-commerce-consumer/circular-economy-upcycling-marketplace"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIVendingMachineNetworkManager",
+        "path": "frontend/src/components/Layout.jsx:17",
+        "route": "/ai/demand-forecast",
+        "originApp": "retail-commerce-consumer/circular-economy-upcycling-marketplace"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIVendingMachineNetworkManager",
+        "path": "frontend/src/pages/DemandForecast.jsx",
+        "route": "/DemandForecast",
+        "originApp": "retail-commerce-consumer/circular-economy-upcycling-marketplace"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "backend/src/routes/ai.js:248",
+        "route": "/forecast-demand",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/App.js:89",
+        "route": "/demand-forecasts",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/components/Layout.js:26",
+        "route": "/demand-forecasts",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/Dashboard.js:193",
+        "route": "/demand-forecasts",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/DemandForecasts.js",
+        "route": "/DemandForecasts",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIBakeryProductionManager",
+        "path": "backend/routes/ai.js:92",
+        "route": "/demand-forecast",
+        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIGhostKitchenNetworkManager",
+        "path": "backend/routes/ai.js:93",
+        "route": "/demand-forecast",
+        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIGhostKitchenNetworkManager",
+        "path": "frontend/src/App.jsx:112",
+        "route": "/ai/demand-forecast",
+        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIGhostKitchenNetworkManager",
+        "path": "frontend/src/App.jsx:214",
+        "route": "/ai/demand-forecast",
+        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIGhostKitchenNetworkManager",
+        "path": "frontend/src/pages/Dashboard.jsx:49",
+        "route": "/ai/demand-forecast",
+        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIBreweryCraftBeverageOps",
+        "path": "backend/routes/ai.js:162",
+        "route": "/demand-forecast",
+        "originApp": "retail-commerce-consumer/food-flow-order"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "ai-food-flow-order",
+        "path": "server/src/routes/ai.ts:165",
+        "route": "/demand-forecast",
+        "originApp": "retail-commerce-consumer/food-flow-order"
+      }
+    ]
+  },
+  {
     "name": "Demand Signals",
     "canonicalKey": "demand signal",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "page"
     ],
     "routes": [
@@ -1177,6 +1550,13 @@
       "retail-commerce-consumer/pricing-optimizer"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/DemandSignals.js:1",
+        "route": "/demand-signals",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
       {
         "kind": "page",
         "sourceProject": "AIPricingOptimizer",
@@ -2299,6 +2679,48 @@
     ]
   },
   {
+    "name": "Generate",
+    "canonicalKey": "generate",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/bundle-recommendations?tool=generate",
+      "/demand-forecasts?tool=generate",
+      "/discount-optimizations?tool=generate"
+    ],
+    "sourceProjects": [
+      "AIPricingOptimizer"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/pricing-optimizer"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/BundleRecommendations.js:1",
+        "route": "/bundle-recommendations?tool=generate",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/DemandForecasts.js:1",
+        "route": "/demand-forecasts?tool=generate",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/DiscountOptimizations.js:1",
+        "route": "/discount-optimizations?tool=generate",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      }
+    ]
+  },
+  {
     "name": "Generate Outfit",
     "canonicalKey": "generate outfit",
     "aliases": [],
@@ -2436,66 +2858,28 @@
   {
     "name": "Market Trends",
     "canonicalKey": "market trend",
-    "aliases": [
-      "Market Trends Page"
-    ],
+    "aliases": [],
     "kinds": [
-      "api",
+      "ai-page",
       "page"
     ],
     "routes": [
       "/MarketTrends",
-      "/ai/MarketTrendsPage",
-      "/ai/market-trends",
       "/market-trends"
     ],
     "sourceProjects": [
-      "AIAuctionHousePlatform",
-      "AIPawnShopSecondhandDealer",
-      "AIPricingOptimizer",
-      "AIWineSpiritsinventorySommelier"
+      "AIPricingOptimizer"
     ],
     "consolidatedFromApps": [
-      "retail-commerce-consumer/circular-economy-upcycling-marketplace",
-      "retail-commerce-consumer/classifytravelersecurity",
-      "retail-commerce-consumer/marketplace-builder-platform",
       "retail-commerce-consumer/pricing-optimizer"
     ],
     "evidence": [
       {
-        "kind": "api",
-        "sourceProject": "AIPawnShopSecondhandDealer",
-        "path": "server/routes/ai.js:166",
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/MarketTrends.js:1",
         "route": "/market-trends",
-        "originApp": "retail-commerce-consumer/circular-economy-upcycling-marketplace"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIAuctionHousePlatform",
-        "path": "backend/routes/ai.js:600",
-        "route": "/market-trends",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIAuctionHousePlatform",
-        "path": "frontend/src/App.js:80",
-        "route": "/ai/market-trends",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIAuctionHousePlatform",
-        "path": "frontend/src/pages/Dashboard.js:22",
-        "route": "/ai/market-trends",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIAuctionHousePlatform",
-        "path": "frontend/src/pages/ai/MarketTrendsPage.js",
-        "route": "/ai/MarketTrendsPage",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
       },
       {
         "kind": "page",
@@ -2524,13 +2908,6 @@
         "path": "frontend/src/pages/MarketTrends.js",
         "route": "/MarketTrends",
         "originApp": "retail-commerce-consumer/pricing-optimizer"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIWineSpiritsinventorySommelier",
-        "path": "backend/routes/customFeatures.js:83",
-        "route": "/market-trends",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
       }
     ]
   },
@@ -2988,6 +3365,32 @@
     ]
   },
   {
+    "name": "Predict Price",
+    "canonicalKey": "predict price",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/price-tracker?tool=predict-price"
+    ],
+    "sourceProjects": [
+      "AIPricingOptimizer"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/pricing-optimizer"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/PriceTracker.js:1",
+        "route": "/price-tracker?tool=predict-price",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      }
+    ]
+  },
+  {
     "name": "Price Elasticity",
     "canonicalKey": "elasticity price",
     "aliases": [],
@@ -3129,6 +3532,7 @@
     "canonicalKey": "price suggestion",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "page"
     ],
     "routes": [
@@ -3142,6 +3546,13 @@
       "retail-commerce-consumer/pricing-optimizer"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/PriceSuggestions.js:1",
+        "route": "/price-suggestions",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
       {
         "kind": "page",
         "sourceProject": "AIPricingOptimizer",
@@ -3364,6 +3775,32 @@
         "sourceProject": "AIPricingOptimizer",
         "path": "frontend/src/pages/PricingSimulation.js",
         "route": "/PricingSimulation",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      }
+    ]
+  },
+  {
+    "name": "Pricing Simulation Sandbox",
+    "canonicalKey": "pricing sandbox simulation",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/pricing-simulation"
+    ],
+    "sourceProjects": [
+      "AIPricingOptimizer"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/pricing-optimizer"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "frontend/src/pages/PricingSimulation.js:1",
+        "route": "/pricing-simulation",
         "originApp": "retail-commerce-consumer/pricing-optimizer"
       }
     ]
@@ -3641,12 +4078,10 @@
       "api"
     ],
     "routes": [
-      "/nutrition/recommend",
       "/recommend"
     ],
     "sourceProjects": [
       "AIFashionDesigner",
-      "AIFitnessCoach",
       "AIFuneralHomeOperationsManager",
       "AIHotelRevenueManager",
       "AIInventoryForecasting",
@@ -3659,7 +4094,6 @@
       "retail-commerce-consumer/generic-ordering-service-enhanced",
       "retail-commerce-consumer/inventory-forecasting",
       "retail-commerce-consumer/laundry-services",
-      "retail-commerce-consumer/pet-health-monitor",
       "retail-commerce-consumer/pricing-optimizer"
     ],
     "evidence": [
@@ -3683,20 +4117,6 @@
         "path": "backend/src/routes/subscriptionOptimization.js:9",
         "route": "/recommend",
         "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIFitnessCoach",
-        "path": "server/routes/ai.js:270",
-        "route": "/nutrition/recommend",
-        "originApp": "retail-commerce-consumer/pet-health-monitor"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIFitnessCoach",
-        "path": "server/routes/recoveryProtocols.js:14",
-        "route": "/recommend",
-        "originApp": "retail-commerce-consumer/pet-health-monitor"
       },
       {
         "kind": "api",

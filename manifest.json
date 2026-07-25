@@ -10,12 +10,12 @@
     "AIPricingOptimizer",
     "AIWholesaleDistributionOptimizer"
   ],
-  "featureCount": 120,
-  "candidateFeatureCount": 193,
-  "eliminatedSimilarFeatures": 73,
-  "evidenceCount": 270,
-  "aiPageCount": 0,
-  "sourceAIPageCount": 0,
+  "featureCount": 130,
+  "candidateFeatureCount": 200,
+  "eliminatedSimilarFeatures": 70,
+  "evidenceCount": 300,
+  "aiPageCount": 17,
+  "sourceAIPageCount": 17,
   "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
   "optimizationPolicy": "Equivalent feature names are consolidated once per industry and assigned to one canonical app owner",
   "database": "database.sqlite",
@@ -24,6 +24,6 @@
     "seededTables": 44,
     "seededRows": 691
   },
-  "visibleFeatureCount": 41,
+  "visibleFeatureCount": 51,
   "featureVisibilityMode": "seeded-or-ai"
 }

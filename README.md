@@ -3,7 +3,7 @@
 Industry: **Retail, Commerce & Consumer**  
 Specialization: **Pricing Optimizer**
 
-This standalone application consolidates source-backed capabilities into 120 optimized features, including 41 visible data-backed or AI-enabled views. Its public demo SQLite database contains 691 sanitized source rows across 44 imported tables and 120 operational workflow records.
+This standalone application consolidates source-backed capabilities into 130 optimized features, including 51 visible data-backed or AI-enabled views. Its public demo SQLite database contains 691 sanitized source rows across 44 imported tables and 120 operational workflow records.
 
 ## Run locally
 
